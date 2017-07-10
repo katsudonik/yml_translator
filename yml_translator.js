@@ -13,7 +13,7 @@ casper.start('https://translate.google.co.jp/', function() {
     var ja = '‘—‚é';
     this.sendKeys('#source', ja, {reset: true});
     this.wait(1000, function() {
-        console.log(this.getHTML('#result_box'));
+        console.log(this.getHTML('#result_box span'));
     });
 });
 
