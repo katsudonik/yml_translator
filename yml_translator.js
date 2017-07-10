@@ -10,7 +10,7 @@ var casper = require("casper").create({
 
 // affiliate amazon top
 casper.start('https://translate.google.co.jp/', function() {
-    var ja = 'test';
+    var ja = '“ú–{Œê';
     this.sendKeys('#source', ja, {reset: true});
     this.capture('big-google.png');
     this.wait(1000, function() {
