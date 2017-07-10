@@ -12,8 +12,10 @@ var casper = require("casper").create({
 casper.start('https://translate.google.co.jp/', function() {
     var ja = '‘—‚é';
     this.sendKeys('#source', ja, {reset: true});
+    this.capture('big-google.png');
     this.wait(1000, function() {
         console.log(this.getHTML('#result_box', true));
+        this.capture('big-google2.png');
     });
 });
 
