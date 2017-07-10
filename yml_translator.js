@@ -12,7 +12,9 @@ var casper = require("casper").create({
 casper.start('https://translate.google.co.jp/', function() {
     var ja = '‘—‚é';
     this.sendKeys('#source', ja, {reset: true});
-    this.echo(this.getHTML('#result_box'));
+    this.wait(1000, function() {
+        this.echo(this.getHTML('#result_box'));
+    });
 });
 
 casper.run();
